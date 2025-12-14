@@ -1,0 +1,766 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+    --color-primary: #256fe8;
+    --color-secondary: #2fa2dc;
+    --color-accent: #ffa436;
+    --color-bg: #f4f7fb;
+    --color-lightgray: #eef1f5;
+    --color-darktext: #24364d;
+    --color-header: #fff;
+    --color-btn: #256fe8;
+    --color-border: #dae1e7;
+    --card-shadow: 0 8px 40px rgba(37, 111, 232, .13);
+    --radius-card: 16px;
+    --navbar-shadow: 0 2px 12px rgba(37, 111, 232, 0.07);
+    --footer-bg: #fff;
+    --footer-border: #256fe8;
+    --transition: .32s cubic-bezier(.65, -0.06, .33, 1.11);
+}
+
+/*== GLOBALS ==*/
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: var(--color-bg);
+    margin: 0;
+    color: var(--color-darktext);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*== NAVBAR ==*/
+.navbar {
+    box-shadow: var(--navbar-shadow);
+    background: var(--color-header);
+    animation: navbarFadeIn .9s;
+}
+
+@keyframes navbarFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.navbar-brand {
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: .35px;
+    color: var(--color-primary) !important;
+    transition: color .18s;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    margin-right: 10px;
+    transition: color .18s;
+    position: relative;
+    color: var(--color-darktext) !important;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--color-primary) !important;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: var(--color-accent);
+    transition: width .20s;
+    margin: auto;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 60%;
+}
+
+.social-icons a {
+    color: var(--color-primary);
+    margin: 0 8px;
+    font-size: 1.35rem;
+    transition: color .2s, transform .18s;
+}
+
+.social-icons a:hover {
+    color: var(--color-accent);
+    transform: scale(1.15) rotate(-6deg);
+}
+
+/*== HERO SECTION ==*/
+.hero-section {
+    background: linear-gradient(135deg, rgba(47, 162, 220, 0.12), rgba(255, 255, 255, 0.79)),
+        url('https://i.pinimg.com/736x/34/f2/59/34f259f7678e712ea93c59b6aa49fc77.jpg') no-repeat center center;
+    background-size: cover;
+    color: var(--color-darktext);
+    padding: 100px 0;
+    text-align: center;
+    position: relative;
+    animation: heroFadeIn 1.2s;
+}
+
+@keyframes heroFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(.93);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.hero-section h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-shadow: 0 3px 12px rgba(47, 162, 220, 0.13);
+    animation: floatText 1.7s cubic-bezier(.36, .74, .95, .14) infinite alternate;
+}
+
+@keyframes floatText {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(14px);
+    }
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    text-shadow: 0 2px 7px rgba(0, 0, 0, 0.10);
+    margin-bottom: 32px;
+    line-height: 1.6;
+}
+
+/*== BUTTONS ==*/
+.btn-primary,
+.btn-outline-primary {
+    border-radius: 24px;
+    font-weight: 600;
+    padding: 12px 28px;
+    font-size: 1rem;
+    box-shadow: 0 3px 14px rgba(37, 111, 232, 0.10);
+    transition: background var(--transition), color var(--transition), box-shadow .17s, transform .16s;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary:active::after,
+.btn-outline-primary:active::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 160%;
+    height: 160%;
+    background: rgba(37, 111, 232, 0.08);
+    border-radius: 50%;
+    animation: ripple .42s linear;
+    pointer-events: none;
+}
+
+@keyframes ripple {
+    0% {
+        opacity: 0.9;
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+
+.btn-primary {
+    background: linear-gradient(82deg, #256fe8 60%, #2fa2dc 100%);
+    border: none;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #2fa2dc;
+    box-shadow: 0 8px 32px rgba(47, 162, 220, 0.16);
+    transform: scale(1.05);
+}
+
+.btn-outline-primary {
+    border: 2px solid #256fe8;
+    color: #256fe8;
+    background: #fff;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+    background: #256fe8;
+    color: #fff;
+    box-shadow: 0 2px 14px rgba(37, 111, 232, 0.15);
+    transform: scale(1.05);
+}
+
+/*== CARDS & INVENTORY ==*/
+.catalog-bg {
+    background: #f4f7fb;
+}
+
+.catalog-title {
+    font-weight: 700;
+    color: #256fe8;
+    letter-spacing: 1px;
+    margin-bottom: 2.1rem;
+    font-size: 2rem;
+}
+
+.card {
+    border-radius: var(--radius-card);
+    box-shadow: var(--card-shadow);
+    transition: box-shadow var(--transition), transform .28s cubic-bezier(.28, 1, .78, 1.15);
+    background: #fff;
+    border: none;
+    overflow: hidden;
+    animation: cardPop .8s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+@keyframes cardPop {
+    0% {
+        opacity: 0;
+        transform: translateY(18px) scale(.96);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.card:hover {
+    box-shadow: 0 18px 56px rgba(37, 111, 232, 0.24);
+    transform: translateY(-11px) scale(1.055) rotate(-1.2deg);
+}
+
+.card-title {
+    font-weight: 700;
+    color: var(--color-darktext);
+    font-size: 1.25rem;
+    margin-top: 2px;
+    letter-spacing: .6px;
+    animation: cardFadeIn .8s;
+}
+
+@keyframes cardFadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.card-img-top {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    transition: transform .28s cubic-bezier(.33, .96, .53, 1.07), filter .18s;
+    filter: brightness(0.96);
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.card:hover .card-img-top {
+    transform: scale(1.06) rotate(-2.7deg);
+    filter: brightness(1.08);
+}
+
+.card-text {
+    color: #353f54;
+    min-height: 55px;
+    animation: fadeIn .8s;
+    line-height: 1.5;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.car-attributes {
+    padding: 0;
+    margin-bottom: 2px;
+}
+
+.car-attributes li {
+    display: inline-block;
+    margin-right: 15px;
+    font-size: 0.95rem;
+    color: #546481;
+    opacity: 0.84;
+    transition: color .14s, opacity .25s;
+}
+
+.card:hover .car-attributes li {
+    opacity: 1;
+    color: #256fe8;
+}
+
+.card-badge {
+    position: absolute;
+    top: 14px;
+    left: -8px;
+    background: var(--color-accent);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.90rem;
+    padding: 6px 17px 6px 17px;
+    border-radius: 0 9px 9px 0;
+    box-shadow: 0 2px 10px rgba(37, 111, 232, 0.18);
+    z-index: 9;
+    animation: badgeFlyIn .6s;
+}
+
+@keyframes badgeFlyIn {
+    0% {
+        transform: translateX(-40px) scale(0.87);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
+/*== SECTIONS & ANIMATIONS ==*/
+section {
+    animation: sectionFadeIn .91s;
+    padding: 60px 0;
+}
+
+@keyframes sectionFadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.bg-light .card {
+    background: var(--color-lightgray);
+}
+
+/*== FINANCING ==*/
+.bg-light {
+    background: var(--color-lightgray);
+}
+
+.card.p-4.border-0.shadow {
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(37, 111, 232, 0.07);
+    transition: box-shadow .17s;
+}
+
+.card.p-4.border-0.shadow:hover {
+    box-shadow: 0 10px 26px rgba(37, 111, 232, 0.11);
+    transform: scale(1.01);
+}
+
+/*== FOOTER ==*/
+.footer {
+    background: var(--footer-bg);
+    color: var(--color-darktext);
+    padding: 34px 0 16px 0;
+    text-align: center;
+    border-top: 4px solid var(--footer-border);
+    font-family: 'Montserrat', Arial, sans-serif;
+    box-shadow: 0 -2px 12px rgba(37, 111, 232, 0.07);
+}
+
+.footer .social-icons a {
+    color: #256fe8;
+    transition: color .18s, transform .17s;
+    margin: 0 7px;
+    font-size: 1.37rem;
+}
+
+.footer .social-icons a:hover {
+    color: var(--color-accent);
+    transform: scale(1.18) rotate(-11deg);
+}
+
+/*== LOGO ==*/
+.logo {
+    width: 190px;
+    height: auto;
+    margin-right: 12px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.whatsapp-float {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    z-index: 9999;
+    width: 68px;
+    height: 68px;
+    background: linear-gradient(135deg, #25d366 0%, #1ebe5d 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.22);
+    cursor: pointer;
+    transition: transform .28s cubic-bezier(.28, 1, .48, 1.15),
+        box-shadow .28s cubic-bezier(.28, 1, .48, 1.15);
+    animation: waPop 0.8s ease;
+}
+
+@keyframes waPop {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.12) rotate(-4deg);
+    box-shadow: 0 14px 36px rgba(37, 111, 232, 0.25);
+}
+
+.whatsapp-float img {
+    width: 65%;
+    height: 65%;
+    filter: brightness(0) invert(1);
+    pointer-events: none;
+}
+
+/* Marquee / Cinta de marcas */
+.brands-marquee {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 18px 0;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(250, 250, 252, 1) 100%);
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(37, 111, 232, 0.05);
+}
+
+/* Contenedor que se mueve */
+.marquee {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+/* Grupo que se duplica para loop suave */
+.marquee-group {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    /* espacio entre logos */
+    white-space: nowrap;
+    /* Duplicamos visualmente: la animación mueve todo el contenedor (las dos groups) */
+    animation: marquee-scroll 20s linear infinite;
+}
+
+/* Ajustes de logo - tamaño más grande y consistente */
+.marquee-group img.brand-logo {
+    height: 92px;
+    /* tamaño por defecto (escritorio) */
+    width: auto;
+    object-fit: contain;
+    opacity: 0.95;
+    transition: transform .28s ease, opacity .28s ease, filter .28s ease;
+    filter: saturate(1.02) contrast(0.98);
+}
+
+/* hover/zoom sutil */
+.marquee-group img.brand-logo:hover {
+    transform: scale(1.12);
+    opacity: 1;
+}
+
+/* Keyframes: mueve -50% para que la segunda copia empiece donde termina la primera */
+@keyframes marquee-scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/*== RESPONSIVE DESIGN MEJORADO ==*/
+
+/* Pantallas grandes */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+
+    .marquee-group {
+        animation-duration: 26s;
+        gap: 60px;
+    }
+
+    .marquee-group img.brand-logo {
+        height: 110px;
+    }
+}
+
+/* Tablets y pantallas medianas */
+@media (max-width: 1199.98px) {
+    .hero-section {
+        padding: 80px 0;
+    }
+
+    .marquee-group {
+        gap: 42px;
+        animation-duration: 18s;
+    }
+
+    .marquee-group img.brand-logo {
+        height: 86px;
+    }
+
+    .card-img-top {
+        height: 200px;
+    }
+}
+
+/* Tablets pequeñas */
+@media (max-width: 991.98px) {
+    .navbar-brand {
+        font-size: 1.3rem;
+    }
+
+    .hero-section {
+        padding: 70px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-section p {
+        font-size: 1.1rem;
+    }
+
+    .marquee-group {
+        gap: 36px;
+        animation-duration: 16s;
+    }
+
+    .marquee-group img.brand-logo {
+        height: 72px;
+    }
+
+    .card-img-top {
+        height: 180px;
+    }
+
+    .catalog-title {
+        font-size: 1.8rem;
+    }
+}
+
+/* Móviles grandes */
+@media (max-width: 767.98px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .logo {
+        width: 150px;
+    }
+
+    .hero-section {
+        padding: 60px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+
+    .hero-section p {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+
+    .marquee-group {
+        gap: 26px;
+        animation-duration: 14s;
+    }
+
+    .marquee-group img.brand-logo {
+        height: 64px;
+    }
+
+    .card-img-top {
+        height: 160px;
+    }
+
+    .catalog-title {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
+
+    section {
+        padding: 40px 0;
+    }
+
+    .btn-primary,
+    .btn-outline-primary {
+        padding: 10px 24px;
+        font-size: 0.95rem;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 575.98px) {
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+
+    .logo {
+        width: 130px;
+    }
+
+    .hero-section {
+        padding: 50px 0;
+    }
+
+    .hero-section h1 {
+        font-size: 1.6rem;
+    }
+
+    .hero-section p {
+        font-size: 0.95rem;
+    }
+
+    .marquee-group {
+        gap: 20px;
+        animation-duration: 12s;
+    }
+
+    .marquee-group img.brand-logo {
+        height: 56px;
+    }
+
+    .card-img-top {
+        height: 140px;
+    }
+
+    .catalog-title {
+        font-size: 1.4rem;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card-text {
+        font-size: 0.9rem;
+    }
+
+    .car-attributes li {
+        font-size: 0.85rem;
+        margin-right: 10px;
+    }
+
+    .footer {
+        padding: 25px 0 12px 0;
+    }
+
+    .whatsapp-float {
+        width: 60px;
+        height: 60px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 410px) {
+    .hero-section h1 {
+        font-size: 1.4rem;
+    }
+
+    .hero-section {
+        padding: 40px 0;
+    }
+
+    .marquee-group {
+        gap: 16px;
+    }
+
+    .marquee-group img.brand-logo {
+        height: 48px;
+    }
+
+    .card-img-top {
+        height: 120px;
+    }
+
+    .catalog-title {
+        font-size: 1.3rem;
+    }
+
+    .btn-primary,
+    .btn-outline-primary {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 0.9rem;
+    }
+}
+
+/*== SCROLLBAR ==*/
+::-webkit-scrollbar {
+    width: 7px;
+    background: #efefef;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2fa2dc;
+    border-radius: 13px;
+}
+
+/* Pausar animación cuando el usuario está 'hover' o foco (mejora accesibilidad) */
+.brands-marquee:focus-within .marquee-group,
+.brands-marquee:hover .marquee-group {
+    animation-play-state: paused;
+}
