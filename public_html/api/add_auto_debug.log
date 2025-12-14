@@ -1,0 +1,42 @@
+[2025-11-17 20:33:06] === add_auto.php INICIADO ===
+[2025-11-17 20:33:06] POST recibido:
+Array
+(
+    [vin] => 567
+    [marca] => XD
+    [modelo] => XD
+    [anio] => 1900
+    [precio] => 1
+    [millaje] => 1
+    [combustible] => Diesel
+    [drive_train] => FWS
+    [descripcion] => XD
+    [destacado] => 0
+    [estado] => available
+    [principal] => new_0
+)
+
+[2025-11-17 20:33:06] ERROR INSERT AUTO: Data truncated for column 'estado' at row 1
+[2025-11-17 20:38:13] === add_auto.php INICIADO ===
+[2025-11-17 20:38:13] POST recibido:
+Array
+(
+    [vin] => 5678
+    [marca] => cc
+    [modelo] => ff
+    [anio] => 1901
+    [precio] => 1
+    [millaje] => 1
+    [combustible] => Diesel
+    [drive_train] => 4x4
+    [descripcion] => xd
+    [destacado] => 1
+    [estado] => disponible
+    [principal] => new_0
+)
+
+[2025-11-17 20:38:13] Auto insertado con id = 18
+[2025-11-17 20:38:13] principal recibido: new_0
+[2025-11-17 20:38:13] Procesando imágenes...
+[2025-11-17 20:38:13] Imagen guardada: uploads/car_691b79a533b245.44259453.jpg | principal = 1
+[2025-11-17 20:38:13] === add_auto.php FINALIZADO ===

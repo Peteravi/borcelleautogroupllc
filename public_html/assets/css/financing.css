@@ -1,0 +1,620 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    background-image: url('/img/logo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+:root {
+    --color-primary: #256fe8;
+    --color-secondary: #2fa2dc;
+    --color-accent: #ffa436;
+    --color-bg: #f4f7fb;
+    --color-lightgray: #eef1f5;
+    --color-darktext: #24364d;
+    --color-header: #fff;
+    --color-btn: #256fe8;
+    --color-border: #dae1e7;
+    --card-shadow: 0 8px 40px rgba(37, 111, 232, .13);
+    --radius-card: 16px;
+    --navbar-shadow: 0 2px 12px rgba(37, 111, 232, 0.07);
+    --footer-bg: #fff;
+    --footer-border: #256fe8;
+    --transition: 0.28s cubic-bezier(.65, -0.06, .33, 1.11);
+}
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: var(--color-bg);
+    color: var(--color-darktext);
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* NAVBAR */
+.navbar {
+    box-shadow: var(--navbar-shadow);
+    background: var(--color-header);
+    animation: navbarFadeIn 1s;
+}
+
+@keyframes navbarFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.navbar-brand {
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: .35px;
+    color: var(--color-primary) !important;
+    transition: color .20s;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    margin-right: 10px;
+    transition: color .18s;
+    position: relative;
+    color: var(--color-darktext) !important;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--color-primary) !important;
+}
+
+.navbar-nav .nav-link::after {
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: var(--color-accent);
+    transition: width .17s;
+    margin: auto;
+}
+
+.navbar-nav .nav-link:hover::after {
+    width: 65%;
+}
+
+.social-icons a {
+    color: var(--color-primary);
+    margin: 0 8px;
+    font-size: 1.37rem;
+    transition: color .21s, transform .18s;
+}
+
+.social-icons a:hover {
+    color: var(--color-accent);
+    transform: scale(1.18) rotate(-7deg);
+}
+
+/* FINANCING STEPS CARDS */
+.card {
+    border-radius: var(--radius-card);
+    box-shadow: var(--card-shadow);
+    transition: box-shadow var(--transition), transform .22s;
+    background: #fff;
+    border: none;
+    overflow: hidden;
+    animation: cardPop .93s cubic-bezier(.21, .89, .41, 1.25);
+    min-height: 210px;
+}
+
+@keyframes cardPop {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(.92);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.card:hover {
+    box-shadow: 0 14px 46px rgba(37, 111, 232, 0.21);
+    transform: translateY(-5px) scale(1.035);
+    transition: all .26s cubic-bezier(.71, -0.61, .42, 1.87);
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+}
+
+.card-title {
+    font-weight: 700;
+    color: var(--color-darktext);
+    margin-top: 4px;
+    font-size: 1.25rem;
+}
+
+.card .badge {
+    background: linear-gradient(90deg, #256fe8 60%, #2fa2dc 100%);
+    color: #fff;
+    box-shadow: 0 2px 16px rgba(47, 162, 220, 0.18);
+    font-size: 1.20rem;
+    margin-bottom: .7em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .18s, box-shadow .22s;
+    border: none;
+}
+
+.card .fw-bold {
+    color: var(--color-primary);
+}
+
+.card .bi {
+    font-size: 1.5rem;
+    vertical-align: middle;
+}
+
+section .fw-bold,
+h2,
+h4 {
+    color: var(--color-primary);
+}
+
+.lead {
+    color: var(--color-accent);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+/* FORM */
+.card form .input-group-text {
+    background: var(--color-lightgray);
+    border-radius: 8px 0 0 8px;
+    border: none;
+    font-size: 1.15em;
+    color: var(--color-secondary);
+    transition: background .17s;
+}
+
+.card form input.form-control {
+    border-radius: 0 8px 8px 0;
+    border: 1.2px solid var(--color-border);
+    font-size: 1em;
+    box-shadow: none;
+    transition: border .18s, box-shadow .20s;
+}
+
+.card form input.form-control:focus {
+    border-color: var(--color-secondary);
+    box-shadow: 0 2px 12px rgba(47, 162, 220, .10);
+}
+
+.card form .input-group:focus-within .input-group-text {
+    background: var(--color-secondary);
+    color: #fff;
+}
+
+.card form button {
+    border-radius: 22px;
+    background: linear-gradient(95deg, #256fe8 65%, #2fa2dc 100%);
+    border: none;
+    font-weight: 600;
+    font-size: 1.04em;
+    box-shadow: 0 2px 14px rgba(37, 111, 232, 0.10);
+    transition: background .19s, transform .16s, box-shadow .18s;
+    padding: 12px 28px;
+}
+
+.card form button:hover {
+    background: #ffa436;
+    color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 5px 18px rgba(255, 164, 54, 0.14);
+}
+
+.card form .bi-send-fill {
+    font-size: 1.1em;
+    vertical-align: middle;
+}
+
+/* BG LIGHT */
+.bg-light {
+    background: var(--color-lightgray) !important;
+}
+
+/* FOOTER */
+.footer {
+    background: var(--footer-bg);
+    color: var(--color-darktext);
+    padding: 32px 0 14px 0;
+    text-align: center;
+    border-top: 4px solid var(--footer-border);
+    margin-top: 38px;
+    font-family: 'Montserrat', Arial, sans-serif;
+    box-shadow: 0 -2px 14px rgba(37, 111, 232, 0.09);
+}
+
+.footer .social-icons a {
+    color: #256fe8;
+    transition: color .18s, transform .17s;
+    margin: 0 7px;
+    font-size: 1.32rem;
+}
+
+.footer .social-icons a:hover {
+    color: var(--color-accent);
+    transform: scale(1.15) rotate(-10deg);
+}
+
+/* LOGO */
+.logo {
+    width: 190px;
+    height: auto;
+    margin-right: 12px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* WHATSAPP FLOAT */
+.whatsapp-float {
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    z-index: 9999;
+    width: 68px;
+    height: 68px;
+    background: linear-gradient(135deg, #25d366 0%, #1ebe5d 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.22);
+    cursor: pointer;
+    transition: transform .28s cubic-bezier(.28, 1, .48, 1.15),
+        box-shadow .28s cubic-bezier(.28, 1, .48, 1.15);
+    animation: waPop 0.8s ease;
+}
+
+@keyframes waPop {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.12) rotate(-4deg);
+    box-shadow: 0 14px 36px rgba(37, 111, 232, 0.25);
+}
+
+.whatsapp-float img {
+    width: 65%;
+    height: 65%;
+    filter: brightness(0) invert(1);
+    pointer-events: none;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+    width: 8px;
+    background: #eef1f5;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #2fa2dc;
+    border-radius: 14px;
+}
+
+/* RESPONSIVE DESIGN MEJORADO */
+
+/* Pantallas grandes */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+
+    .navbar-brand {
+        font-size: 1.8rem;
+    }
+
+    .card {
+        min-height: 240px;
+    }
+}
+
+/* Tablets y pantallas medianas */
+@media (max-width: 1199.98px) {
+    .navbar-brand {
+        font-size: 1.4rem;
+    }
+
+    .card {
+        min-height: 190px;
+    }
+
+    .card-body {
+        padding: 1.25rem;
+    }
+
+    .card-title {
+        font-size: 1.2rem;
+    }
+
+    .lead {
+        font-size: 1.05rem;
+    }
+}
+
+/* Tablets pequeñas */
+@media (max-width: 991.98px) {
+    .navbar-brand {
+        font-size: 1.3rem;
+    }
+
+    .logo {
+        width: 160px;
+    }
+
+    .card {
+        min-height: 170px;
+        margin-bottom: 1rem;
+    }
+
+    .card-body {
+        padding: 1rem;
+    }
+
+    .card-title {
+        font-size: 1.15rem;
+    }
+
+    .card .badge {
+        font-size: 1.1rem;
+    }
+
+    .card .bi {
+        font-size: 1.3rem;
+    }
+
+    .lead {
+        font-size: 1rem;
+    }
+
+    .footer {
+        padding: 25px 0 12px 0;
+        margin-top: 30px;
+    }
+}
+
+/* Móviles grandes */
+@media (max-width: 767.98px) {
+    .navbar-brand {
+        font-size: 1.2rem;
+    }
+
+    .logo {
+        width: 140px;
+    }
+
+    .navbar-nav .nav-link {
+        margin-right: 2px;
+        margin-bottom: 4px;
+        font-size: 0.95rem;
+    }
+
+    .social-icons a {
+        font-size: 1.2rem;
+        margin: 0 6px;
+    }
+
+    .card {
+        min-height: 150px;
+    }
+
+    .card-body {
+        padding: 0.75rem;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card .badge {
+        font-size: 1rem;
+        margin-bottom: 0.5em;
+    }
+
+    .card .bi {
+        font-size: 1.2rem;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h4 {
+        font-size: 1.3rem;
+    }
+
+    .lead {
+        font-size: 0.95rem;
+    }
+
+    .footer {
+        padding: 20px 0 10px 0;
+        margin-top: 25px;
+    }
+
+    .footer .social-icons a {
+        font-size: 1.2rem;
+    }
+
+    .whatsapp-float {
+        width: 60px;
+        height: 60px;
+        bottom: 20px;
+        right: 20px;
+    }
+}
+
+/* Móviles pequeños */
+@media (max-width: 575.98px) {
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+
+    .logo {
+        width: 120px;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 0.9rem;
+    }
+
+    .social-icons a {
+        font-size: 1.1rem;
+        margin: 0 4px;
+    }
+
+    .card {
+        min-height: 130px;
+    }
+
+    .card-body {
+        padding: 0.6rem;
+    }
+
+    .card-title {
+        font-size: 1rem;
+        margin-top: 2px;
+    }
+
+    .card .badge {
+        font-size: 0.9rem;
+    }
+
+    .card .bi {
+        font-size: 1.1rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    h4 {
+        font-size: 1.2rem;
+    }
+
+    .lead {
+        font-size: 0.9rem;
+    }
+
+    .card form button {
+        padding: 10px 24px;
+        font-size: 0.95rem;
+    }
+
+    .footer {
+        padding: 18px 0 8px 0;
+        margin-top: 20px;
+    }
+
+    .footer .social-icons a {
+        font-size: 1.1rem;
+    }
+}
+
+/* Móviles muy pequeños */
+@media (max-width: 410px) {
+    .navbar-brand {
+        font-size: 1rem;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+
+    h4 {
+        font-size: 1.1rem;
+    }
+
+    .card {
+        min-height: 120px;
+    }
+
+    .card-body {
+        padding: 0.5rem;
+    }
+
+    .card-title {
+        font-size: 0.95rem;
+    }
+
+    .card .badge {
+        font-size: 0.85rem;
+    }
+
+    .card .bi {
+        font-size: 1rem;
+    }
+
+    .lead {
+        font-size: 0.85rem;
+    }
+
+    .card form button {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        bottom: 18px;
+        right: 18px;
+    }
+
+    .footer {
+        padding: 15px 0 6px 0;
+        font-size: 0.9rem;
+    }
+}
+
+/* Secciones generales */
+section {
+    padding: 40px 0;
+}
+
+@media (min-width: 768px) {
+    section {
+        padding: 60px 0;
+    }
+}
+
+@media (min-width: 992px) {
+    section {
+        padding: 80px 0;
+    }
+}

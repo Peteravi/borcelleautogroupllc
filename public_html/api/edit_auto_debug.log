@@ -1,0 +1,265 @@
+2025-11-15T21:24:32+01:00 - Recibido: Array
+(
+    [vin] => 1
+    [marca] => s
+    [modelo] => s
+    [anio] => 1900
+    [precio] => 1
+    [millaje] => 1
+    [combustible] => Gasoline
+    [drive_train] => fwd
+    [descripcion] => xd
+    [destacado] => 1
+    [estado] => disponible
+    [id] => 1
+)
+
+2025-11-15T21:24:32+01:00 - combustible filtrado: 'Gasoline'
+2025-11-15T21:24:32+01:00 - combustible HEX: 4761736f6c696e65
+2025-11-15T21:58:05+01:00 - Recibido: Array
+(
+    [vin] => 7
+    [marca] => ff
+    [modelo] => hj
+    [anio] => 1915
+    [precio] => 15
+    [millaje] => 10
+    [combustible] => Gasoline
+    [drive_train] => fwd
+    [descripcion] => vbnm
+    [destacado] => 0
+    [estado] => disponible
+    [id] => 6
+)
+
+2025-11-15T21:58:05+01:00 - combustible recibido: 'Gasoline'
+2025-11-15T21:58:05+01:00 - combustible HEX: 4761736f6c696e65
+2025-11-15T21:58:05+01:00 - Updated rows: 1
+2025-11-15T21:58:17+01:00 - Recibido: Array
+(
+    [vin] => 7
+    [marca] => ff
+    [modelo] => hj
+    [anio] => 1915
+    [precio] => 15
+    [millaje] => 10
+    [combustible] => Gasoline
+    [drive_train] => fwd
+    [descripcion] => vbnm
+    [destacado] => 0
+    [estado] => disponible
+    [id] => 6
+)
+
+2025-11-15T21:58:17+01:00 - combustible recibido: 'Gasoline'
+2025-11-15T21:58:17+01:00 - combustible HEX: 4761736f6c696e65
+2025-11-15T21:58:17+01:00 - Updated rows: 0
+2025-11-15T21:58:43+01:00 - Recibido: Array
+(
+    [vin] => 7
+    [marca] => ff
+    [modelo] => hj
+    [anio] => 1915
+    [precio] => 15
+    [millaje] => 10
+    [combustible] => Gasoline
+    [drive_train] => fwd
+    [descripcion] => vbnm
+    [destacado] => 0
+    [estado] => disponible
+    [id] => 6
+)
+
+2025-11-15T21:58:43+01:00 - combustible recibido: 'Gasoline'
+2025-11-15T21:58:43+01:00 - combustible HEX: 4761736f6c696e65
+2025-11-15T21:58:43+01:00 - Updated rows: 0
+2025-11-15T21:59:08+01:00 - Recibido: Array
+(
+    [vin] => 7
+    [marca] => ff
+    [modelo] => hj
+    [anio] => 1915
+    [precio] => 15
+    [millaje] => 10
+    [combustible] => Diesel
+    [drive_train] => fwd
+    [descripcion] => vbnm
+    [destacado] => 0
+    [estado] => disponible
+    [id] => 6
+)
+
+2025-11-15T21:59:08+01:00 - combustible recibido: 'Diesel'
+2025-11-15T21:59:08+01:00 - combustible HEX: 44696573656c
+2025-11-15T21:59:08+01:00 - Updated rows: 1
+2025-11-15T22:03:34+01:00 - Recibido: Array
+(
+    [vin] => 7
+    [marca] => ff
+    [modelo] => hj
+    [anio] => 1920
+    [precio] => 15
+    [millaje] => 10
+    [combustible] => Diesel
+    [drive_train] => fwd
+    [descripcion] => vbnm
+    [destacado] => 0
+    [estado] => disponible
+    [id] => 6
+)
+
+2025-11-15T22:03:34+01:00 - combustible recibido: 'Diesel'
+2025-11-15T22:03:34+01:00 - combustible HEX: 44696573656c
+2025-11-15T22:03:34+01:00 - Updated rows: 1
+2025-11-15T22:09:13+01:00 - Recibido: Array
+(
+    [vin] => 7
+    [marca] => ff
+    [modelo] => hj
+    [anio] => 1928
+    [precio] => 15
+    [millaje] => 10
+    [combustible] => Diesel
+    [drive_train] => fwd
+    [descripcion] => vbnm
+    [destacado] => 1
+    [estado] => disponible
+    [id] => 6
+)
+
+2025-11-15T22:09:13+01:00 - combustible recibido: 'Diesel'
+2025-11-15T22:09:13+01:00 - combustible HEX: 44696573656c
+2025-11-15T22:09:13+01:00 - Updated rows: 1
+2025-11-15T22:13:52+01:00 - Recibido: Array
+(
+    [vin] => 7
+    [marca] => ff
+    [modelo] => hj
+    [anio] => 1937
+    [precio] => 15
+    [millaje] => 10
+    [combustible] => Diesel
+    [drive_train] => fwd
+    [descripcion] => vbnm
+    [destacado] => 1
+    [estado] => disponible
+    [id] => 6
+)
+
+2025-11-15T22:13:52+01:00 - combustible recibido: 'Diesel'
+2025-11-15T22:13:52+01:00 - combustible HEX: 44696573656c
+2025-11-15T22:13:52+01:00 - Updated rows: 1
+[2025-11-17 15:22:57] === edit_auto.php INICIADO ===
+[2025-11-17 15:22:57] Datos recibidos:
+Array
+(
+    [id] => 14
+    [vin] => 7890
+    [marca] => aa
+    [modelo] => bb
+    [anio] => 1900
+    [precio] => 1
+    [millaje] => 1
+    [combustible] => Diesel
+    [drive_train] => fwd
+    [descripcion] => cf
+    [destacado] => 1
+    [estado] => disponible
+    [principal] => 3
+)
+
+[2025-11-17 15:22:57] deleted_images:
+Array
+(
+)
+
+[2025-11-17 15:22:57] ✔ Auto 14 actualizado correctamente
+[2025-11-17 15:22:57] Asignando imagen principal: 3
+[2025-11-17 15:22:57] ✔ Principal asignada a imagen existente ID 3
+[2025-11-17 15:22:57] === edit_auto.php FINALIZADO ===
+[2025-11-17 15:23:27] === edit_auto.php INICIADO ===
+[2025-11-17 15:23:27] Datos recibidos:
+Array
+(
+    [id] => 14
+    [vin] => 7890
+    [marca] => aa
+    [modelo] => bb
+    [anio] => 1900
+    [precio] => 1
+    [millaje] => 1
+    [combustible] => 0
+    [drive_train] => fwd
+    [descripcion] => cf
+    [destacado] => 1
+    [estado] => disponible
+    [principal] => 4
+)
+
+[2025-11-17 15:23:27] deleted_images:
+Array
+(
+)
+
+[2025-11-17 15:23:27] ✔ Auto 14 actualizado correctamente
+[2025-11-17 15:23:27] Procesando nuevas imágenes
+[2025-11-17 15:23:27] Nueva imagen agregada: uploads/car_691b2fdfb30907.21434018.jpg (ID=5)
+[2025-11-17 15:23:27] Asignando imagen principal: 4
+[2025-11-17 15:23:27] ✔ Principal asignada a imagen existente ID 4
+[2025-11-17 15:23:27] === edit_auto.php FINALIZADO ===
+[2025-11-17 15:34:15] === edit_auto.php INICIADO ===
+[2025-11-17 15:34:15] Datos recibidos:
+Array
+(
+    [id] => 14
+    [vin] => 7890
+    [marca] => aa
+    [modelo] => bb
+    [anio] => 1900
+    [precio] => 1
+    [millaje] => 1
+    [combustible] => 0
+    [drive_train] => fwd
+    [descripcion] => cf
+    [destacado] => 1
+    [estado] => disponible
+    [principal] => 4
+)
+
+[2025-11-17 15:34:15] deleted_images:
+Array
+(
+)
+
+[2025-11-17 15:34:15] ✔ Auto 14 actualizado correctamente
+[2025-11-17 15:34:15] Asignando imagen principal: 4
+[2025-11-17 15:34:15] ✔ Principal asignada a imagen existente ID 4
+[2025-11-17 15:34:15] === edit_auto.php FINALIZADO ===
+[2025-11-17 15:34:32] === edit_auto.php INICIADO ===
+[2025-11-17 15:34:32] Datos recibidos:
+Array
+(
+    [id] => 14
+    [vin] => 7890
+    [marca] => aa
+    [modelo] => bb
+    [anio] => 1900
+    [precio] => 1
+    [millaje] => 1
+    [combustible] => 0
+    [drive_train] => fwd
+    [descripcion] => cf
+    [destacado] => 1
+    [estado] => disponible
+    [principal] => 4
+)
+
+[2025-11-17 15:34:32] deleted_images:
+Array
+(
+)
+
+[2025-11-17 15:34:32] ✔ Auto 14 actualizado correctamente
+[2025-11-17 15:34:32] Asignando imagen principal: 4
+[2025-11-17 15:34:32] ✔ Principal asignada a imagen existente ID 4
+[2025-11-17 15:34:32] === edit_auto.php FINALIZADO ===
